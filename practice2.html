@@ -19,7 +19,6 @@ d3.csv("./total.csv",
 		var lines = d3.line().x(function(d,number){return number*(width/ln);}).y(function(d){return height-d.sum*(height/maxy)});
 		ctrl.append("path").data([data]).attr("d", lines).attr("stroke", "red").attr("fill", "none");
 	}
-
 );
 </script>
 </body>
