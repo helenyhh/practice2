@@ -15,7 +15,7 @@ d3.csv("./total.csv",
 	{
 		var ln = data.length;
 		console.log(data);
-		var maxy = d3.max(data, function(d){return d.sum;});
+		var maxy = d3.max(data,function(a){return a.sum;});
 		console.log(maxy);
 		var lines = d3.line().x(function(d,i){return i*(width/ln);})
 		.y(function(d){return height-d.sum*(height/maxy)});
