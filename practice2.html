@@ -16,7 +16,7 @@ d3.csv("./total.csv",
 		var ln = data.length;
 		console.log(data);
 		var miny = d3.min(data,function(d){return d.sum;});
-		console.log(maxy);
+		console.log(miny);
 		var lines = d3.line().x(function(d,i){return i*(width/ln);})
 		.y(function(d){return height-d.sum*(height/400-miny)});
 		ctrl.append("path").data([data]).attr("d", lines).attr("stroke", "red").attr("fill", "none");
